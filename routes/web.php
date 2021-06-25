@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect('comments');
 });
+
+// Маршруты для работы с комментариями
+Route::resource('/comments', 'Comments\CommentController')->only(['index', 'store'])->names('comments');

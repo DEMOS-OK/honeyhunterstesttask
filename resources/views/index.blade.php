@@ -13,6 +13,7 @@
 </head>
 <body>
 
+    {{-- Верхняя часть страницы--}}
     <header>
         <div class="container">
             <div class="main">
@@ -23,52 +24,59 @@
         </div>
     </header>
 
+    {{-- Секция с формой создания комментариев --}}
     <section class='form-section'>
         <div class="container">
             <div class="icon-block">
                 <img src="/images/contact_icon.png" alt="Contact icon">
             </div>
             <div class="form-block">
-                <form action="" method='POST'>
-                    <div class="row">
-                        <div class="form-items">
-                            <div class="row">
-                                <div class="col col-md-4">
-                                    <div class="form-group">
-                                        <label for="name"> Имя <span>*</span> </label>
-                                        <input type="text" name='name'>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email"> E-Mail <span>*</span> </label>
-                                        <input type="text" name='email'>
-                                    </div>
+                <div class="row">
+                    <div class="form-items">
+                        <div class="row">
+                            <div class="col col-md-4">
+                                <div class="form-group">
+                                    <label for="name"> Имя <span>*</span> </label>
+                                    <input type="text" name='name'>
                                 </div>
-                                <div class="col-md-2"></div>
-                                <div class="col col-md-6">
-                                    <div class="form-group">
-                                        <label for="comment"> Комментарий <span>*</span> </label>
-                                        <textarea name="comment" class='comment-textarea' rows='8' maxlength="480"></textarea>
-                                    </div>
-                                </div> 
+                                <div class="form-group">
+                                    <label for="email"> E-Mail <span>*</span> </label>
+                                    <input type="text" name='email'>
+                                </div>
                             </div>
+                            <div class="col-md-2"></div>
+                            <div class="col col-md-6">
+                                <div class="form-group">
+                                    <label for="comment"> Комментарий <span>*</span> </label>
+                                    <textarea name="comment" class='comment-textarea' rows='8' maxlength="415"></textarea>
+                                </div>
+                            </div> 
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-button">
-                            <button type='submit'> Записать </button>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="form-button">
+                        <button type='submit' id='sendComment'> Записать </button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
+    {{-- Секция с комментариями --}}
     <section>
+
     </section>
 
+    {{-- Подвал сайта --}}
     <footer>
 
     </footer>
 
+    {{--Подключение js-скриптов--}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
