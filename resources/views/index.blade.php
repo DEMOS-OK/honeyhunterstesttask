@@ -27,9 +27,11 @@
     {{-- Секция с формой создания комментариев --}}
     <section class='form-section'>
         <div class="container">
+
             <div class="icon-block">
                 <img src="/images/contact_icon.png" alt="Contact icon">
             </div>
+
             <div class="form-block">
                 <div class="row">
                     <div class="form-items">
@@ -48,9 +50,13 @@
                             <div class="col col-md-6">
                                 <div class="form-group">
                                     <label for="comment"> Комментарий <span>*</span> </label>
-                                    <textarea name="comment" class='comment-textarea' rows='8' maxlength="415"></textarea>
+                                    <textarea name="text" class='comment-textarea' rows='8' maxlength="415"></textarea>
                                 </div>
-                            </div> 
+                            </div>
+                            <div class="col hidden">
+                                <input type="hidden" name='url' value="{{route('comments.store')}}"">
+                                @csrf
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,6 +66,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
