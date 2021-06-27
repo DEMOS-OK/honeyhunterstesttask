@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Comments;
 
 use Illuminate\Http\Request;
 use App\Models\Comment;
+use App\Http\Requests\Comments\CommentStoreRequest;
 
 /**
  * Контроллер работы с комментариями
@@ -24,10 +25,10 @@ class CommentController extends CoreController
     /**
      * Сохраняет новый комментарий в базе данных
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  CommentStoreRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CommentStoreRequest $request)
     {
         // Получаем данные с формы
         $data = $request->input();
