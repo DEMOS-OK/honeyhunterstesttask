@@ -71,8 +71,31 @@
     </section>
 
     {{-- Секция с комментариями --}}
-    <section>
-
+    <section class='comments-section'>
+        <div class="container">
+            <div class="row comments-section-header">
+                <h2> Выводим комментарии </h2>
+            </div>
+            <div class="row comments-section-content">
+                @foreach ($comments as $comment)
+                <div class="comment-col">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <p>{{$comment->name}}</p>
+                        </div>
+                        <div class="comment-body">
+                            <p class="email">
+                                {{$comment->email}}
+                            </p>
+                            <p class='comment'>
+                                {{$comment->text}}
+                            </p> 
+                        </div>                     
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </section>
 
     {{-- Подвал сайта --}}

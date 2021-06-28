@@ -18,8 +18,8 @@ class CommentController extends CoreController
      */
     public function index()
     {
-        
-        return view('index');
+        $comments = Comment::all();
+        return view('index', compact('comments'));
     }
 
     /**

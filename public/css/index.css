@@ -92,3 +92,68 @@ header .main {
     font-family: 'RobotoBold';
     float: right;
 }
+
+
+/* СТИЛИ СЕКЦИИ С КОММЕНТАРИЯМИ */
+.comments-section {
+    height: auto;
+    background-color: #f6f6f7;
+}
+
+.comments-section-header {
+    height: 206px;
+    display: grid;
+    align-items: center;
+}
+
+.comments-section-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4vw;
+}
+
+.comments-section-header h2 {
+    color: #4b596c;
+    font-size: 37px;
+    text-align: center;
+}
+
+.comment {
+    height: 360px;
+    max-width: 19.6vw;
+    background-color: #e9eef3;
+    margin: 0 auto;
+}
+
+.comment-header {
+    height: 56px;
+    background-color: #4b596c;
+    display: grid;
+    justify-content: center;
+}
+
+.comment-header p {
+    font-size: 28px;
+    margin: 0 auto;
+    color: #fff;
+    display: grid;
+    padding: 5px;
+}
+
+.comment-body {
+    padding: 3vw;
+    display: grid;
+    justify-content: center;
+}
+
+.comment-body p.email {
+    color: #6d737b;
+    font-size: 28px;
+    margin: 0 auto;
+}
+
+.comment-body p.comment {
+    color: #6d737b;
+    font-size: 28px;
+    margin: 0 auto;  
+}
