@@ -159,3 +159,29 @@ header .main {
 .comment-body .email {
     margin-bottom: 34px;
 }
+
+
+/* ФУТЕР САЙТА */
+footer {
+    height: 97px;
+    background-color: #2d3136;
+}
+
+footer .main {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer .contacts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    height: 33px;
+}
+
+footer .icon img {
+    height: 30px;
+    width: 30px;
+}

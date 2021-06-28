@@ -100,7 +100,26 @@
 
     {{-- Подвал сайта --}}
     <footer>
-
+        <div class="container">
+            <div class="main">
+                <div class="logo">
+                    <img src="/images/logo.png" alt="Honey Hunters">
+                </div>
+                <div class="contacts">
+                    <div></div>
+                    <div class="icon vk">
+                        <a href="https://vk.com" target='_blank'>
+                            <img src="/images/vk_icon.png" alt="Vk">
+                        </a>
+                    </div>
+                    <div class="icon fb">
+                        <a href="https://facebook.com" target='_blank'>
+                            <img src="/images/fb_icon.png" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     {{--Подключение js-скриптов--}}
