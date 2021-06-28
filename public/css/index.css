@@ -126,11 +126,19 @@ header .main {
     margin: 0 auto;
 }
 
+.comment.my {
+    background-color: #deebde;
+}
+
 .comment-header {
     height: 56px;
     background-color: #4b596c;
     display: grid;
     justify-content: center;
+}
+
+.comment.my .comment-header {
+    background-color: #58ad52;
 }
 
 .comment-header p {
@@ -158,6 +166,10 @@ header .main {
 
 .comment-body .email {
     margin-bottom: 34px;
+}
+
+.comment.my .email {
+    color: #58ad52;
 }
 
 

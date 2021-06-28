@@ -28,6 +28,32 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+/**
+ * Добавляет комментарий на странице после успешного ajax-запроса
+ * @param {Array} string
+ */
+function addComment(data)
+{
+    html = "\
+        <div class='comment-col'>\
+            <div class='comment my'>\
+                <div class='comment-header'>\
+                    <p>" + data['name'] + "</p>\
+                </div>\
+                <div class='comment-body'>\
+                    <p class='email'>\
+                        " + data['email'] + "\
+                    </p>\
+                    <p class='comment-text'>\
+                        " + data['text'] + "\
+                    </p>\
+                </div>\
+            </div>\
+        </div >\
+    ";
+    $('.comments-section-content').append(html);
+}
+
 
 // Отправка ajax-запроса на создание комментария при клике по кнопке
 $('#sendComment').click(function() {
@@ -58,6 +84,7 @@ $('#sendComment').click(function() {
             data: postData,
             success: function (data) {
                 alert(data['message']);
+                addComment(postData);
             },
             error: function (request, status, error) {
                 alert(request.responseJSON.message)
