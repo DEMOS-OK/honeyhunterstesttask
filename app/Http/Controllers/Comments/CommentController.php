@@ -5,12 +5,22 @@ namespace App\Http\Controllers\Comments;
 use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Http\Requests\Comments\CommentStoreRequest;
+use App\Repositories\CommentsRepository;
 
 /**
  * Контроллер работы с комментариями
  */
 class CommentController extends CoreController
 {
+
+    /**
+     * Конструктор класса CommentController
+     */
+    public function __construct()
+    {
+        $this->commentsRepository = app(CommentsRepository::class);
+    }
+
     /**
      * Отображает все комментарии
      *
@@ -18,7 +28,8 @@ class CommentController extends CoreController
      */
     public function index()
     {
-        $comments = Comment::all();
+        $comments = $this->commentsRepository->getAll();
+
         return view('index', compact('comments'));
     }
 
