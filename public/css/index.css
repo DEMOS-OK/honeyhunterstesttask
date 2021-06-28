@@ -98,6 +98,7 @@ header .main {
 .comments-section {
     height: auto;
     background-color: #f6f6f7;
+    padding-bottom: 4vw;
 }
 
 .comments-section-header {
@@ -133,7 +134,7 @@ header .main {
 }
 
 .comment-header p {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0 auto;
     color: #fff;
     display: grid;
@@ -146,14 +147,15 @@ header .main {
     justify-content: center;
 }
 
-.comment-body p.email {
+.comment-body p {
     color: #6d737b;
-    font-size: 28px;
+    font-size: 22px;
     margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 15vw;
 }
 
-.comment-body p.comment {
-    color: #6d737b;
-    font-size: 28px;
-    margin: 0 auto;  
+.comment-body .email {
+    margin-bottom: 34px;
 }

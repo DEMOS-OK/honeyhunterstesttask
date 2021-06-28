@@ -39,7 +39,7 @@
                             <div class="col col-md-4">
                                 <div class="form-group">
                                     <label for="name"> Имя <span>*</span> </label>
-                                    <input type="text" name='name'>
+                                    <input type="text" name='name' maxlength='15'>
                                 </div>
                                 <div class="form-group">
                                     <label for="email"> E-Mail <span>*</span> </label>
@@ -50,7 +50,7 @@
                             <div class="col col-md-6">
                                 <div class="form-group">
                                     <label for="comment"> Комментарий <span>*</span> </label>
-                                    <textarea name="text" class='comment-textarea' rows='8' maxlength="415"></textarea>
+                                    <textarea name="text" class='comment-textarea' rows='8' maxlength="50"></textarea>
                                 </div>
                             </div>
                             <div class="col hidden">
@@ -87,7 +87,7 @@
                             <p class="email">
                                 {{$comment->email}}
                             </p>
-                            <p class='comment'>
+                            <p class='comment-text'>
                                 {{$comment->text}}
                             </p> 
                         </div>                     
