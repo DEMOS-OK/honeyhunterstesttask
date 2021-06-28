@@ -1,0 +1,22 @@
+/* ФАЙЛ СТИЛЕЙ МОБИЛЬНОЙ ВЕРСИИ */
+
+@media only screen and (max-width : 768px) {
+
+    .form-button {
+        margin-top: 30px;
+        height: 100px;
+    }
+
+    .comments-section-content {
+        grid-template-columns: 1fr;
+    }
+
+    .comment {
+        max-width: 90vw;
+    }
+
+    .comment-body p {
+        width: 80vw;
+    }
+
+}
